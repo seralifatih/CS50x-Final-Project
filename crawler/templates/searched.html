@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Aranan Kitap
+{% endblock %}
+
+{% block main %}
+
+<div class="content-center">
+
+
+    <table class="table table-hover">
+        <tr>
+            <th style="text-align:center">Kapak</th>
+            <th style="text-align:center">Kitap</th>
+            <th style="text-align:center">Yazar</th>
+            <th style="text-align:center">Fiyat</th>
+            <th style="text-align:center">Satıcı</th>
+        </tr>
+        <tr>
+            <td style="text-align:center"><img src="{{ book_imageKY }}" width="54" height="85"></td>
+            <td style="text-align:center">{{ book_nameKY }}</td>
+            <td style="text-align:center">{{ book_authorKY }}</td>
+            <td style="text-align:center">{{ priceKY }}</td>
+            <td style="text-align:center"> <button class="btn btn-primary"
+                    onclick="window.location.href='{{ book_urlKY }}';">
+                    Kitapyurdu.com'a Git
+                </button></td>
+        </tr>
+        <tr>
+            <td style="text-align:center"><img src="{{ book_imageDR }}" width="54" height="85">
+            </td>
+            <td style="text-align:center">{{ book_nameDR }}</td>
+            <td style="text-align:center">{{ book_authorDR }}</td>
+            <td style="text-align:center">{{ priceDR }}</td>
+            <td style="text-align:center"> <button class="btn btn-primary"
+                    onclick="window.location.href='{{ book_urlDR }}';">
+                    D&R'a Git
+                </button></td>
+        </tr>
+        <tr>
+            <td style="text-align:center"><img src="{{ book_image_idefix }}" width="54" height="85"></td>
+            <td style="text-align:center">{{ book_nameidefix }}</td>
+            <td style="text-align:center">{{ book_authoridefix }}</td>
+            <td style="text-align:center">{{ priceidefix }}</td>
+            <td style="text-align:center"> <button target="_blank" class="btn btn-primary"
+                    onclick="window.location.href='{{ book_urlidefix }}';">
+                    idefix'e Git
+                </button></td>
+        </tr>
+        <tr>
+            <td style="text-align:center"><img src="{{ book_image_pandora }}" width="54" height="85"></td>
+            <td style="text-align:center">{{ book_namepandora }}</td>
+            <td style="text-align:center">{{ book_authorpandora }}</td>
+            <td style="text-align:center">{{ pricepandora }}</td>
+            <td style="text-align:center"> <button class="btn btn-primary"
+                    onclick="window.location.href='{{ book_urlpandora }}';">
+                    Pandora'ya Git
+                </button></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
